@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Ideal Marriage - Online Matrimony</title>
+    <link rel="icon" href="favicon.png"> 
+    <link rel="stylesheet" href="idealmarriages.css">
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        
+        /* Firefox */
+        input[type=number] {
+          -moz-appearance: textfield;
+        }
+        </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="headersection"></div>
+
+
+    <div class="container" style="max-width: 200vh;">
+        <div class="row" style="height: 85vh;">
+            
+            <div class="col-md-6" style="display: flex;">
+                <img src="title.png" class="img-fluid" style="margin: auto;"  alt="">
+            </div>
+            
+            <div class="col-md-6" style="display: flex;">
+                <form id="submit-form" style="margin: auto; width: 25em;" action="https://script.google.com/macros/s/AKfycbyyUsRifZx_oxRzD0qFpneybO2090j8semhAMXW7Q/exec" method="POST"> 
+                    <div class="form-group">
+                      <label for="exampleInputEmail1" style="color: #f02036; font-weight: bolder; font-size: 1.3em; font-family:Georgia, 'Times New Roman', Times, serif ;">Name</label>
+                      <input name="Name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name here">
+                      <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1" style="color: #f02036; font-weight: bolder; font-size: 1.3em;font-family:Georgia, 'Times New Roman', Times, serif ">Contact number</label>
+                      <input name="Contact" type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter your 10 digit mobile number here">
+                     </div>
+                    <input  type="submit" value="Register now" class="btn btn-primary" style="background-color: #f02036; width: auto; font-weight:normal;"><br>
+                  <br>
+                   
+                  
+                    <h1 style="font-size: large; font-weight: lighter;);" > Just finish the registration 
+                   <br>
+                    We will call you later . . .</h1> 
+                    
+                   
+                   
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+      $("#submit-form").submit((e)=>{
+          e.preventDefault()
+          $.ajax({
+              url:"https://script.google.com/macros/s/AKfycbyyUsRifZx_oxRzD0qFpneybO2090j8semhAMXW7Q/exec",
+              data:$("#submit-form").serialize(),
+              method:"post",
+              success:function (response){
+                  alert("Form submitted successfully")
+                  window.location.reload()
+                  //window.location.href="https://google.com"
+              },
+              error:function (err){
+                  alert("Something Error")
+  
+              }
+          })
+      })
+  </script>
+  </body>
+</html>
